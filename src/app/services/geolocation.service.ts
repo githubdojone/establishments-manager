@@ -9,9 +9,8 @@ import { handleError } from '../utils/handleErrorRequest';
 @Injectable({
   providedIn: 'root',
 })
-export class EstablishmentService {
-  baseUrl =
-    'https://my-json-server.typicode.com/james-delivery/frontend-challenge';
+export class GeolocationService {
+  baseUrl = 'https://geocode.xyz';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -19,9 +18,9 @@ export class EstablishmentService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
-  getEstablishments(): Observable<Establishment[]> {
+  getCity(lat: String, long: String): Observable<any> {
     return this.httpClient
-      .get<Establishment[]>(`${this.baseUrl}/establishments`)
+      .get<any>(`${this.baseUrl}/${lat},${long}?json=1`)
       .pipe(retry(2), catchError(handleError));
   }
 }
