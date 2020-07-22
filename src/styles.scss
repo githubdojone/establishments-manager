@@ -27,3 +27,36 @@ app-root {
 }
 
 @import "~@ng-select/ng-select/themes/default.theme.css";
+
+.ng-select.custom .ng-select-container.ng-has-value {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    #f8f9fd !important;
+  border: 1px solid #e6e8f0 !important;
+  box-sizing: border-box !important;
+  border-radius: 5px !important;
+  height: 40px !important;
+  box-shadow: none !important;
+}
+
+.ng-select.custom .ng-value-label,
+.ng-option-label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #7b7e8c;
+  outline: none;
+}
+
+.ng-dropdown-panel.ng-select-bottom {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    #f8f9fd !important;
+  border: 1px solid #e6e8f0 !important;
+}

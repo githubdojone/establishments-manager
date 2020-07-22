@@ -2,7 +2,7 @@
   <label>{{ params.label }}</label>
   <ng-select
     id="{{ params.id }}"
-    class="select"
+    class="custom"
     [items]="params.options"
     [(ngModel)]="inputModel"
     (ngModelChange)="inputModelChange.emit(inputModel)"

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Establishment } from 'src/app/models/establishment';
-import { Dropdown } from 'src/app/models/dropdown';
 
 @Component({
   selector: 'app-establishment-details',
@@ -79,20 +78,22 @@ export class EstablishmentDetailsComponent implements OnInit {
   };
 
   inputs = {
-    city: '',
+    city: 'Curitiba',
     name: '',
     address: '',
-    bank: '',
-    type: '',
-    document: '',
-    agency: '',
-    agencyDigit: '',
-    account: '',
-    accountDigit: '',
-    autoPlunder: '',
+    financial: {
+      bank: '',
+      type: '',
+      document: '',
+      agency: '',
+      agencyDigit: '',
+      account: '',
+      accountDigit: '',
+      autoPlunder: '',
+    },
   };
 
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: Params) => {
@@ -101,22 +102,29 @@ export class EstablishmentDetailsComponent implements OnInit {
 
       this.establishment = this.establishmentList.find(
         (item: Establishment) => {
-          this.indexOfEstablishment = params.index;
+          this.indexOfEstablishment = item.index;
           return item.id === params.id;
         }
       );
 
-      const { city, name, address, financial } = this.establishment;
-      console.log(this.establishment);
+      let { city, name, address, financial } = this.establishment;
 
-      const populateInput = { ...financial, city, name, address };
+      if (!city) {
+        city = '';
+      }
 
-      // this.inputs = populateInput;
+      if (!financial) {
+        financial = this.inputs.financial;
+      }
+
+      const populateInput = { financial, city, name, address };
+
+      this.inputs = populateInput;
     });
   }
 
   handleSubmit(event) {
-    const { city, name, address, ...financial } = this.inputs;
+    const { city, name, address, financial } = this.inputs;
     this.establishment = {
       ...this.establishment,
       city,
@@ -132,5 +140,7 @@ export class EstablishmentDetailsComponent implements OnInit {
       'establishments',
       JSON.stringify([this.establishment, ...filteredArr])
     );
+
+    this.router.navigateByUrl('/list');
   }
 }

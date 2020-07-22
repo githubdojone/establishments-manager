@@ -1,17 +1,17 @@
 import { Financial } from './financial';
 
 export interface Establishment {
-  id: String;
-  index: Number;
-  guid: String;
-  picture: String;
-  name: String;
-  email: String;
-  phone: String;
-  address: String;
-  registered: String;
-  latitude: String;
-  longitude: String;
-  city: String;
+  id: string;
+  index: number;
+  guid: string;
+  picture: string;
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+  registered: string;
+  latitude: string;
+  longitude: string;
+  city: string;
   financial: Financial;
 }

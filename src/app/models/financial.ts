@@ -1,10 +1,10 @@
 export interface Financial {
-  bank: String;
-  type: String;
-  document: String;
-  agency: String;
-  agencyDigit: String;
-  account: String;
-  accountDigit: String;
-  autoPlunder: String;
+  bank: string;
+  type: string;
+  document: string;
+  agency: string;
+  agencyDigit: string;
+  account: string;
+  accountDigit: string;
+  autoPlunder: string;
 }

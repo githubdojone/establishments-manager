@@ -1,4 +1,4 @@
 export interface Dropdown {
-  name: String;
-  value: String;
+  name: string;
+  value: string;
 }
