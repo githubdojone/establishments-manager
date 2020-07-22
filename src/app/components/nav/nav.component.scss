@@ -1,0 +1,16 @@
+.nav {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  color: white;
+  font-weight: 600;
+  justify-content: center;
+
+  img {
+    width: 42px;
+  }
+}
