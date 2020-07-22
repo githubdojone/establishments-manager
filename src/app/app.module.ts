@@ -7,6 +7,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { ListPage } from './pages/list/list.page';
 import { DetailsPage } from './pages/details/details.page';
 import { NotFoundPage } from './pages/not-found/not-found.page';
+import { EstablishmentsListComponent } from './components/establishments-list/establishments-list.component';
+import { EstablishmentsItemComponent } from './components/establishments-item/establishments-item.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { NotFoundPage } from './pages/not-found/not-found.page';
     ListPage,
     DetailsPage,
     NotFoundPage,
+    EstablishmentsListComponent,
+    EstablishmentsItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
