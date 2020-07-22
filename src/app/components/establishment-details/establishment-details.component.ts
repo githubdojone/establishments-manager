@@ -45,6 +45,7 @@ export class EstablishmentDetailsComponent implements OnInit {
   document = {
     id: 'document',
     label: 'CPF / CNPJ',
+    mask: '000.000.000-00||00.000.000/0000-00',
   };
 
   agency = {
@@ -62,7 +63,7 @@ export class EstablishmentDetailsComponent implements OnInit {
   account = {
     id: 'account',
     label: 'Conta',
-    maxLength: 4,
+    maxLength: 5,
   };
 
   accountDigit = {

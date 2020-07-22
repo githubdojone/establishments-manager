@@ -3,6 +3,7 @@
   <input
     type="text"
     maxlength="{{ params.maxLength || 200 }}"
+    mask="{{ params.mask }}"
     [(ngModel)]="inputModel"
     (ngModelChange)="inputModelChange.emit(inputModel)"
   />

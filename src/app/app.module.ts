@@ -15,9 +15,13 @@ import { EstablishmentDetailsComponent } from './components/establishment-detail
 
 import { InputComponent } from './components/_shared/input/input.component';
 
-import { NgSelectModule } from '@ng-select/ng-select';
 import { SelectComponent } from './components/_shared/select/select.component';
 import { ButtonComponent } from './components/_shared/button/button.component';
+
+import { NgSelectModule } from '@ng-select/ng-select';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+
+export let options: Partial<IConfig> | (() => Partial<IConfig>);
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +42,7 @@ import { ButtonComponent } from './components/_shared/button/button.component';
     HttpClientModule,
     NgSelectModule,
     FormsModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
