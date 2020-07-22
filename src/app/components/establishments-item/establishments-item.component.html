@@ -1,13 +1,15 @@
-<div class="establishment-item">
-  <img src="{{ establishment.picture }}" />
-  <div class="establishment-content">
-    <div>
-      <span class="title">{{ establishment.name }}</span>
-      <span class="title">{{ establishment.id }}</span>
-    </div>
-    <div>
-      <span class="city">{{ city }}</span>
-      <span class="address">{{ establishment.address }}</span>
+<a routerLink="/details/{{ establishment.id }}" routerLinkActive="active">
+  <div class="establishment-item">
+    <img src="{{ establishment.picture }}" />
+    <div class="establishment-content">
+      <div>
+        <span class="title">{{ establishment.name }}</span>
+        <span class="id">{{ establishment.id }}</span>
+      </div>
+      <div class="address">
+        <span *ngIf="city" class="city">{{ city }}</span>
+        <span>{{ establishment.address }}</span>
+      </div>
     </div>
   </div>
-</div>
+</a>
