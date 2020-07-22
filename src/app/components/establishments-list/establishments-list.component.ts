@@ -13,6 +13,11 @@ export class EstablishmentsListComponent implements OnInit {
   constructor(private establishmentService: EstablishmentService) {}
 
   ngOnInit(): void {
+    const establishments = localStorage.getItem('establishments');
+    if (establishments) {
+      this.establishments = JSON.parse(establishments);
+      return;
+    }
     this.getEstablishments();
   }
 
@@ -21,7 +26,7 @@ export class EstablishmentsListComponent implements OnInit {
       .getEstablishments()
       .subscribe((establishments: Establishment[]) => {
         this.establishments = establishments;
-        console.log(establishments);
+        localStorage.setItem('establishments', JSON.stringify(establishments));
       });
   }
 }

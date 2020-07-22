@@ -10,6 +10,7 @@ import { DetailsPage } from './pages/details/details.page';
 import { NotFoundPage } from './pages/not-found/not-found.page';
 import { EstablishmentsListComponent } from './components/establishments-list/establishments-list.component';
 import { EstablishmentsItemComponent } from './components/establishments-item/establishments-item.component';
+import { EstablishmentDetailsComponent } from './components/establishment-details/establishment-details.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { EstablishmentsItemComponent } from './components/establishments-item/es
     NotFoundPage,
     EstablishmentsListComponent,
     EstablishmentsItemComponent,
+    EstablishmentDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

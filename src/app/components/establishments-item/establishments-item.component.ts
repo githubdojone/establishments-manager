@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { GeolocationService } from '../../services/geolocation.service';
 import { Establishment } from '../../models/establishment';
 
 @Component({
@@ -12,22 +11,7 @@ export class EstablishmentsItemComponent implements OnInit {
   @Input()
   establishment: Establishment;
 
-  city: String;
-  loading: Boolean = true;
+  constructor() {}
 
-  constructor(private geolocationService: GeolocationService) {}
-
-  ngOnInit(): void {
-    this.getCity();
-  }
-
-  getCity() {
-    const { latitude, longitude } = this.establishment;
-    this.geolocationService.getCity(latitude, longitude).subscribe((data) => {
-      if (data.city) {
-        this.city = data.city;
-      }
-      this.loading = false;
-    });
-  }
+  ngOnInit(): void {}
 }
