@@ -10,5 +10,34 @@
     </div>
   </div>
   <p class="subtitle">Informações Básicas</p>
+  <div class="input-wrapper">
+    <app-input [params]="name" [(inputModel)]="inputs.name"></app-input>
+    <app-select [params]="city" [(inputModel)]="inputs.city"></app-select>
+    <app-input [params]="address" [(inputModel)]="inputs.address"></app-input>
+  </div>
   <p class="subtitle">Financeiro</p>
+  <div class="input-wrapper">
+    <app-select [params]="bank" [(inputModel)]="inputs.bank"></app-select>
+    <app-select [params]="type" [(inputModel)]="inputs.type"></app-select>
+    <app-input [params]="document" [(inputModel)]="inputs.document"></app-input>
+    <div class="double-input">
+      <app-input [params]="agency" [(inputModel)]="inputs.agency"></app-input>
+      <app-input
+        [params]="agencyDigit"
+        [(inputModel)]="inputs.agencyDigit"
+      ></app-input>
+    </div>
+    <div class="double-input">
+      <app-input [params]="account" [(inputModel)]="inputs.account"></app-input>
+      <app-input
+        [params]="accountDigit"
+        [(inputModel)]="inputs.accountDigit"
+      ></app-input>
+    </div>
+    <app-select
+      [params]="autoPlunder"
+      [(inputModel)]="inputs.autoPlunder"
+    ></app-select>
+  </div>
+  <app-button [text]="'Enviar'" (onClick)="handleSubmit($event)"></app-button>
 </div>

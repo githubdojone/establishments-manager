@@ -68,4 +68,23 @@ a {
     padding-bottom: 16px;
     border-bottom: 1px solid #e6e8f0;
   }
+
+  .input-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+
+  .double-input {
+    display: flex;
+    align-items: flex-end;
+
+    & app-input:first-child {
+      width: 130px;
+      margin-right: 10px;
+    }
+    & app-input:last-child {
+      width: 70px;
+    }
+  }
 }

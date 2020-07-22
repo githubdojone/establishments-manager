@@ -7,7 +7,9 @@
         <span class="id">{{ establishment.id }}</span>
       </div>
       <div class="address">
-        <span class="city">{{ establishment.city }}</span>
+        <span *ngIf="!!establishment.city" class="city">{{
+          establishment.city
+        }}</span>
         <span>{{ establishment.address }}</span>
       </div>
     </div>

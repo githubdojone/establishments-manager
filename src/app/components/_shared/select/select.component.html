@@ -1,0 +1,13 @@
+<div class="select-wrapper">
+  <label>{{ params.label }}</label>
+  <ng-select
+    id="{{ params.id }}"
+    class="select"
+    [items]="params.options"
+    [(ngModel)]="inputModel"
+    (ngModelChange)="inputModelChange.emit(inputModel)"
+    [clearable]="false"
+    [searchable]="false"
+  >
+  </ng-select>
+</div>

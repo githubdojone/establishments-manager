@@ -50,6 +50,20 @@ a {
     }
     .city {
       font-weight: 500;
+      padding-right: 10px;
+      margin-right: 10px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 9px;
+        background-color: #d3d5e0;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
     .address {
       font-size: 15px;

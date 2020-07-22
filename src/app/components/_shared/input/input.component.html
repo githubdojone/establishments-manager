@@ -1,0 +1,9 @@
+<div class="input-wrapper">
+  <label>{{ params.label }}</label>
+  <input
+    type="text"
+    maxlength="{{ params.maxLength || 200 }}"
+    [(ngModel)]="inputModel"
+    (ngModelChange)="inputModelChange.emit(inputModel)"
+  />
+</div>

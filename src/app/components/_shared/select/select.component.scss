@@ -1,0 +1,32 @@
+.select-wrapper {
+  width: 100%;
+
+  label {
+    font-weight: 500;
+    font-size: 13px;
+    color: #4c5164;
+    line-height: 20px;
+  }
+
+  .ng-select.select {
+    & > div {
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.5),
+          rgba(255, 255, 255, 0.5)
+        ),
+        #f8f9fd;
+      border: 1px solid #e6e8f0;
+      box-sizing: border-box;
+      border-radius: 5px;
+      height: 40px;
+    }
+  }
+}
+
+.ng-select.select .ng-value-label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #7b7e8c;
+}

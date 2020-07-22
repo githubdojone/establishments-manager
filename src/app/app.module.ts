@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,11 @@ import { EstablishmentsListComponent } from './components/establishments-list/es
 import { EstablishmentsItemComponent } from './components/establishments-item/establishments-item.component';
 import { EstablishmentDetailsComponent } from './components/establishment-details/establishment-details.component';
 
+import { InputComponent } from './components/_shared/input/input.component';
+
+import { NgSelectModule } from '@ng-select/ng-select';
+import { SelectComponent } from './components/_shared/select/select.component';
+import { ButtonComponent } from './components/_shared/button/button.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,8 +28,17 @@ import { EstablishmentDetailsComponent } from './components/establishment-detail
     EstablishmentsListComponent,
     EstablishmentsItemComponent,
     EstablishmentDetailsComponent,
+    InputComponent,
+    SelectComponent,
+    ButtonComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    NgSelectModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
