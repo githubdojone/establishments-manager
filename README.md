@@ -28,3 +28,5 @@ Trata-se de um sistema de gerenciamento de estabelecimentos para listar e editar
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+OBS: Os arquivos de fontes estão em sua versão free para teste, para publicar o projeto é necessário adquirir uma licença com o proprietário [fabiohaagtype](https://fabiohaagtype.com/fonte/margem/)
