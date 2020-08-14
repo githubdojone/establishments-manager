@@ -17,7 +17,7 @@ Esse projeto foi desenvolvido com [Angular CLI](https://github.com/angular/angul
 
 ## 💻 Projeto
 
-Trata-se de um sistema de gerenciamento de estabelecimentos para listar e editar informações. Aplicação desenvolvida para code chalange do James Delivery.
+Trata-se de um sistema de gerenciamento de estabelecimentos para listar e editar informações.
 
 ## 🤔 Como utilizar
 
